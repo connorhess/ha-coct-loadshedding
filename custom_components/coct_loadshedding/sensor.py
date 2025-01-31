@@ -5,7 +5,7 @@ from .const import (
     ICON,
     SENSOR,
 )
-from .entity import CoCTEntity, LoadSheddingActiveEntity, NextLoadSheddingEntity
+from .entity import CoCTEntity, LoadSheddingActiveEntity, NextLoadSheddingEntity, NextLoadSheddingSecondsEntity
 import datetime
 
 
@@ -79,7 +79,7 @@ class NextLoadSheddingSensor(NextLoadSheddingEntity):
         return ICON
 
 
-class NextLoadSheddingSecondsSensor(CoCTEntity):
+class NextLoadSheddingSecondsSensor(NextLoadSheddingSecondsEntity):
     """Next Load Shedding Seconds Sensor class."""
 
     @property
