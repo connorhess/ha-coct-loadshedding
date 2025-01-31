@@ -187,7 +187,7 @@ class SecondsTillNextSheddingEntity(entity.Entity):
     def device_state_attributes(self):
         """Return the state attributes."""
         return {
-            "next_load_shedding_slot": self.coordinator.data.get("next_load_shedding_slot"),
+            "seconds_till_next_shedding": self.coordinator.data.get("seconds_till_next_shedding"),
         }
 
     async def async_added_to_hass(self):
