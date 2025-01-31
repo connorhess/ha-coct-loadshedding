@@ -90,10 +90,7 @@ class NextLoadSheddingSecondsSensor(NextLoadSheddingSecondsEntity):
     @property
     def state(self):
         """Return the state of the sensor."""
-        next_slot = self.coordinator.data.get("next_load_shedding_slot")
-        if next_slot:
-            return (next_slot - datetime.datetime.now()).total_seconds()
-        return None
+        return self.coordinator.data.get("next_load_shedding_seconds")
 
     @property
     def icon(self):
