@@ -16,8 +16,9 @@ from .const import (  # pylint: disable=unused-import
 )
 
 
-class CoCTFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
+class CoCTFlowHandler(config_entries.ConfigFlow):
     """Config flow for CoCT Loadshedding Interface."""
+    DOMAIN = DOMAIN
 
     VERSION = 1
     CONNECTION_CLASS = config_entries.CONN_CLASS_CLOUD_POLL
