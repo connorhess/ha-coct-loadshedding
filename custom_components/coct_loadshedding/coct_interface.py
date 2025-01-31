@@ -142,6 +142,7 @@ class coct_interface:
         last_updated = None
         today_slots_hours = None
         tomorrow_slots_hours = None
+        next_load_shedding_seconds = None  # Add this line
 
         # grab json and stage
         json = await self.async_get_stage_coct()
@@ -181,6 +182,7 @@ class coct_interface:
         if stage > 0 and coct_area > 0:
             try:
                 next_load_shedding_slot = getNextTimeSlot(stage, coct_area)["date"]
+                next_load_shedding_seconds = (next_load_shedding_slot - datetime.datetime.now()).total_seconds()  # Add this line
             except Exception as e:
                 _LOGGER.error(e, exc_info=True) # log exception info at ERROR log level
             try:
@@ -220,7 +222,8 @@ class coct_interface:
                 "next_stage_start_time": next_stage_start_time,
                 "last_updated": last_updated,
                 "today_slots": today_slots_hours,
-                "tomorrow_slots": tomorrow_slots_hours
+                "tomorrow_slots": tomorrow_slots_hours,
+                "next_load_shedding_seconds": next_load_shedding_seconds,  # Add this line
             },
         }
         _LOGGER.debug("Data: " + str(data))

@@ -2,13 +2,13 @@
   "domain": "coct_loadshedding",
   "name": "CoCT Loadshedding Interface",
   "codeowners": [
-    "@tinuva"
+    "@connorhess"
   ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/tinuva/ha-coct-loadshedding",
+  "documentation": "https://github.com/connorhess/ha-coct-loadshedding",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/tinuva/ha-coct-loadshedding/issues",  
+  "issue_tracker": "https://github.com/connorhess/ha-coct-loadshedding/issues",  
   "requirements": [
     "aiohttp-retry==1.0"
   ],

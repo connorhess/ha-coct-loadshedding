@@ -47,6 +47,7 @@ class CoCTEntity(entity.Entity):
             "last_updated": self.coordinator.data.get("last_updated"),
             "today_slots": self.coordinator.data.get("today_slots"),
             "tomorrow_slots": self.coordinator.data.get("tomorrow_slots"),
+            "next_load_shedding_seconds": self.coordinator.data.get("next_load_shedding_seconds"),  # Add this line
         }
 
     async def async_added_to_hass(self):
