@@ -1,7 +1,7 @@
 """Constants for coct loadshedding interface"""
 # Base component constants
 NAME = "CoCT Loadshedding Interface"
-DOMAIN = "coct_loadshedding"
+DOMAIN = "connor_coct_loadshedding"
 DOMAIN_DATA = f"{DOMAIN}_data"
 VERSION = "1.0.8"
 
