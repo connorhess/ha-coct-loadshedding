@@ -16,7 +16,6 @@ async def async_setup_entry(hass, entry, async_add_devices):
             CoCTStageSensor(coordinator, entry),
             LoadSheddingActiveSensor(coordinator, entry),
             NextLoadSheddingSensor(coordinator, entry),
-            SecondsTillNextSheddingSensor(coordinator, entry),
         ]
     )
 
