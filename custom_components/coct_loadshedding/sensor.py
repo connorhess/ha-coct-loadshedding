@@ -5,7 +5,7 @@ from .const import (
     ICON,
     SENSOR,
 )
-from .entity import CoCTEntity, LoadSheddingActiveEntity, NextLoadSheddingEntity
+from .entity import CoCTEntity, LoadSheddingActiveEntity, NextLoadSheddingEntity, SecondsTillNextSheddingEntity
 from datetime import datetime, timedelta
 
 async def async_setup_entry(hass, entry, async_add_devices):
@@ -77,7 +77,7 @@ class NextLoadSheddingSensor(NextLoadSheddingEntity):
         """Return the icon of the sensor."""
         return ICON
 
-class SecondsTillNextSheddingSensor(NextLoadSheddingEntity):
+class SecondsTillNextSheddingSensor(SecondsTillNextSheddingEntity):
     """Load Shedding Active Sensor class."""
 
     @property
