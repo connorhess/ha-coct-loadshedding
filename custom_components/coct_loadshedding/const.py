@@ -1,11 +1,11 @@
 """Constants for coct loadshedding interface"""
 # Base component constants
-NAME = "CoCT Loadshedding Interface"
-DOMAIN = "coct_loadshedding"
+NAME = "CoCT Loadshedding Interface 2"
+DOMAIN = "coct_loadshedding_2"
 DOMAIN_DATA = f"{DOMAIN}_data"
-VERSION = "1.0.8"
+VERSION = "1.0.9"
 
-ISSUE_URL = "https://github.com/tinuva/ha-coct-loadshedding/issues"
+ISSUE_URL = "https://github.com/connorhess/ha-coct-loadshedding/issues"
 
 # Icons
 ICON = "mdi:lightning-bolt"

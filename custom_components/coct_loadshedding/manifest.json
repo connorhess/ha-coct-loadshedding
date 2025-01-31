@@ -1,6 +1,6 @@
 {
-  "domain": "coct_loadshedding",
-  "name": "CoCT Loadshedding Interface",
+  "domain": "coct_loadshedding_2",
+  "name": "CoCT Loadshedding Interface 2",
   "codeowners": [
     "@connorhess"
   ],
@@ -12,5 +12,5 @@
   "requirements": [
     "aiohttp-retry==1.0"
   ],
-  "version": "1.0.8"
+  "version": "1.0.9"
 }
